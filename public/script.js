@@ -22,16 +22,17 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 // -------------------------- TypeWriter
-const text = "Frontend Master"; // Tekst die getypt moet worden
+const texts = ["Frontend Master", "Web Developer", "Genius"]; // Array met de te typen teksten
 const delay = 100; // Vertraging tussen elke letter (in milliseconden)
 
 const typewriter = document.getElementById("typewriter");
-let index = 0;
+let textIndex = 0; // Index van de huidige tekst in de array
+let charIndex = 0; // Index van de huidige letter in de tekst
 
 function type() {
-  if (index < text.length) {
-    typewriter.textContent += text.charAt(index);
-    index++;
+  if (charIndex < texts[textIndex].length) {
+    typewriter.textContent += texts[textIndex].charAt(charIndex);
+    charIndex++;
     setTimeout(type, delay);
   } else {
     setTimeout(erase, 2000); // Wacht 2 seconden voordat de tekst wordt gewist
@@ -39,17 +40,19 @@ function type() {
 }
 
 function erase() {
-  if (index >= 0) {
-    typewriter.textContent = text.substring(0, index);
-    index--;
+  if (charIndex >= 0) {
+    typewriter.textContent = texts[textIndex].substring(0, charIndex);
+    charIndex--;
     setTimeout(erase, delay);
   } else {
-    index = 0;
+    textIndex = (textIndex + 1) % texts.length; // Wissel naar de volgende tekst in de array
+    charIndex = 0;
     setTimeout(type, delay); // Begin opnieuw met typen
   }
 }
 
 window.addEventListener("load", type);
+
 
 // -----------------------  ScrollAnimatie
 

@@ -111,10 +111,10 @@
         </section>
 
         <!--------------------------- WORK -->
-        <section class="work-section" id="work">
+        <section class="work-section">
             <h2 class="section-title">iO Projects</h2>
             <% data.projects.forEach(project=> { %>
-                <section class="text">
+                <section class="text" id="work">
                     <h3><%- project.role %></h3>
                     <h4><%- project.company %></h4>
                     <p>
@@ -127,7 +127,7 @@
         <section class="experience-section" id="experience">
             <h2 class="section-title">Work</h2>
             <% data.experience.forEach(experience=> { %>
-                <section class="text">
+                <section class="text" id="work">
                     <h3><%- experience.role %></h3>
                     <h4><%- experience.company %></h4>
                     <p>
