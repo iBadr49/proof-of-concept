@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <!----------------------------- BOX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <title>Curriculum Vitae</title>
+</head>
+
+<body>
+    <!------------------- HEADER -->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo"><svg width="61" height="31" viewBox="0 0 91 61" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                        <circle cx="60.5" cy="30.5" r="30.5" fill="#40b2eb" />
+
+                        <circle cx="61" cy="30" r="18" fill="white" />
+
+                        <path
+                            d="M2.61157 0L20.3196 7.17981L12.708 27.585V27.585C2.92816 23.6197 -2.01003 12.3896 1.67828 2.50197L2.61157 0Z"
+                            fill="#40b2eb" />
+
+                        <path
+                            d="M12.708 27.585V27.585C22.4879 31.5503 27.4261 42.7803 23.7378 52.668L20.6297 61L2.92171 53.8202L12.708 27.585Z"
+                            fill="#050542" />
+
+                    </svg></a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="#languages" class="nav__link">Languages</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Side projects</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!------------------------------------ HOME -->
+        <section class="home" id="home">
+            <div class="home-data">
+                <h1 class="home-title">
+                    Hoi,<br />Ik ben <span class="home-title-color">Beau</span> <br>
+                    <span id="typewriter" class="typewriter"></span>
+                </h1>
+            </div>
+            </div>
+
+        </section>
+
+        <!--------------------------- CV BUTTON -->
+        <div class="div-button">
+            <button class="cv-button"> Download CV | PDF</button>
+        </div>
+
+        <!------------------------------ ABOUT -->
+        <section class="about section " id="about">
+            <h2 class="section-title">About <span class="home-title-color">Me</span></h2>
+
+            <div class="about__container">
+                <div class="about__img">
+                    <img src="assets/about.jpg" alt="">
+                </div>
+                <div>
+
+                    <p class="about__text">
+                        Hoi, ik ben Beau, een ervaren front-end ontwikkelaar uit Amsterdam. Mijn passie ligt bij het
+                        creëren van boeiende gebruikerservaringen met behulp van HTML, CSS en JavaScript. Met een scherp
+                        oog voor detail en een sterke focus op kwaliteit, ben ik in staat om moderne en responsieve
+                        websites te ontwikkelen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!---------------------------- SKILLS -->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="text">
+                <ul class="topic">
+                    <% data.skills.forEach(skill=> { %>
+                        <li>
+                            <%= skill.label %>
+                        </li>
+                        <% }); %>
+                </ul>
+        </section>
+
+        <!--------------------------- WORK -->
+        <section class="work-section" id="work">
+            <h2 class="section-title">iO Projects</h2>
+            <% data.projects.forEach(project=> { %>
+                <section class="text">
+                    <h3><%- project.role %></h3>
+                    <h4><%- project.company %></h4>
+                    <p>
+                        <%- project.description %>
+                    </p>
+                </section>
+                <% }); %>
+        </section>
+
+        <section class="experience-section" id="experience">
+            <h2 class="section-title">Work</h2>
+            <% data.experience.forEach(experience=> { %>
+                <section class="text">
+                    <h3><%- experience.role %></h3>
+                    <h4><%- experience.company %></h4>
+                    <p>
+                        <%- experience.description %>
+                    </p>
+                </section>
+                <% }) %>
+        </section>
+
+        <!------------------------- Education -->
+        <section class="education-section" id="education">
+            <h2 class="section-title">Education</h2>
+            <section class="text">
+                <% data.education.forEach(edu=> { %>
+                    <h3><%- edu.name %></h3>
+                    <p><%- edu.institute %></p>
+                    <% }) %>
+            </section>
+
+        </section>
+
+        <!------------------------- Languages -->
+        <section class="language" id="languages">
+            <h2 class="section-title">Languages</h2>
+            <div class="text">
+                <li>Dutch</li>
+                <li>French</li>
+                <li>English</li>
+            </div>
+        </section>
+
+        <!---------------------------- SideProject  -->
+
+        <section class="side-project" id="projects">
+            <h2 class="section-title">Side projects</h2>
+            <% data.sideProjects.forEach(side=> { %>
+                <section class="text">
+                    <h3><%- side.title %></h3>
+                    <p><%- side.description %></p>
+                </section>
+                <% }) %>
+
+        </section>
+    </main>
+
+    <!----------------------------- FOOTER -->
+    <footer class="footer">
+        <p class="footer-title">Beau-ter-ham</p>
+        <div class="footer-social">
+            <a href="#" class="footer-icon"><i class="bx bxl-github"></i></a>
+            <a href="#" class="footer-icon"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="footer-icon"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="footer-icon"><i class="bx bxl-twitter"></i></a>
+        </div>
+        <p class="footer-copy">| iBadr49</p>
+    </footer>
+
+    <!------------------------------- Boxicons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!--------------------------- Scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--------------------------------- Script -->
+    <script src="/script.js"></script>
+
+    <!------------------------ BackToTop Button -->
+    <a href="#" id="back-to-top">↑</a>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
       "description": "At Bank, Beau is responsible for the realization of a component-based architecture for frontend code with the aim of being able to roll out new functionality into production fully automatically. All online applications within SNS must ultimately use this new architecture. This not only for the SNS brand but also for daughter labels such as ASN and Zwitserleven. Beau is member of the core team that supports various feature teams by building the necessary components and tools for automated testing and code releases.",
       "company": "Bank2",
       "stackAndTechniques": [
-        {
+        { 
           "name": "Angular"
         },
         {
