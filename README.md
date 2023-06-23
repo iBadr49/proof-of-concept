@@ -1,9 +1,11 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
+# iO | Portfolio
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+![image](https://github.com/iBadr49/proof-of-concept/assets/112857932/f4cc0881-985c-4c7f-b883-475b6cc76c6f)
 
-## Inhoudsopgave
+
+## 📚 Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
   * [Gebruik](#gebruik)
@@ -16,17 +18,28 @@
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
+iO wilde graag een mooie en unieke cv-webpagina waar hiring managers van bedrijven gemakkelijk via URL een front-ontwikkelaar cv kunnen bekijken
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+De highring manager, de eindgebruiker kan gemakkelijk de cv van een front-ontwikkelaar bekijken via een URL. De cv-pagina bevat leuke animaties en kan worden doorlopen door te scrollen.
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+In dit project is gebruik gemaakt van : ``` Node ``` ``` Express ``` ``` EJS ```
+Voor het installeren van node gebruikte ik het commando npm init om node te initialiseren. Volgens deze modules kunnen geinstalleerd worden doormiddel van: ``` npm install ```, ``` express ``` , ``` ejs ```
+
+Om de applicatie te laten werken, voer dan het volgende commando uit: ``` npm start ```
 
 ## Bronnen
+
+- [MDN](https://developer.mozilla.org/en-US/)
+- [CSS Tricks](https://css-tricks.com/)
+- [Dribbble](https://dribbble.com/)
+- [Colooors](https://coolors.co/)
 
 ## Licentie
 
