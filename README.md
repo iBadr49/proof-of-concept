@@ -27,6 +27,83 @@ De highring manager, de eindgebruiker kan gemakkelijk de cv van een front-ontwik
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
+Mijn cv-webpagina bevat verschillende animaties, ik heb een typeWriter effect de ``` h1 ``` van mijn pagina gevoegd, vond het een leuke animatie om te implementer. Hiervoor heb ik ``` Html ``` ``` Css ``` ``` JavaScript ``` gebruik van gemaakt.
+
+- HTML
+```ejs
+        <!------------------------------------ HOME -->
+        <section class="home" id="home">
+            <div class="home-data">
+                <h1 class="home-title">
+                    Hoi,<br />Ik ben <span class="home-title-color">Beau</span> <br>
+                    <span id="typewriter" class="typewriter"></span>
+                </h1>
+```
+- JAVASCRIPT
+
+```JS
+// -------------------------- TypeWriter
+const text = "Frontend Master"; // Tekst die getypt moet worden
+const delay = 100; // Vertraging tussen elke letter (in milliseconden)
+
+const typewriter = document.getElementById('typewriter');
+let index = 0;
+
+function type() {
+  if (index < text.length) {
+    typewriter.textContent += text.charAt(index);
+    index++;
+    setTimeout(type, delay);
+  } else {
+    setTimeout(erase, 2000); // Wacht 2 seconden voordat de tekst wordt gewist
+  }
+}
+
+function erase() {
+  if (index >= 0) {
+    typewriter.textContent = text.substring(0, index);
+    index--;
+    setTimeout(erase, delay);
+  } else {
+    index = 0;
+    setTimeout(type, delay); // Begin opnieuw met typen
+  }
+}
+
+window.addEventListener('load', type);
+```
+
+- CSS
+
+```css
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: -5px;
+  letter-spacing: 0.15em;
+}
+
+.typewriter::after {
+  content: "|"; /* Knipperende cursor */
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+#typewriter {
+  font-family: "poppins", sans-serif;
+}
+```
+
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 In dit project is gebruik gemaakt van : ``` Node ``` ``` Express ``` ``` EJS ```
