@@ -118,7 +118,7 @@ Om de applicatie te laten werken, voer dan het volgende commando uit: ``` npm st
 - [Dribbble](https://dribbble.com/)
 - [Colooors](https://coolors.co/)
 - [codepen](https://codepen.io/)
-- [Adaptable](https://adaptable.io/app/signin?redirect=%2Fapp%2Fdashboard#)
+- [Cyclic](https://app.cyclic.sh/#/)
 
 ## Licentie
 
