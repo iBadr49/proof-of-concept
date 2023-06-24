@@ -117,6 +117,8 @@ Om de applicatie te laten werken, voer dan het volgende commando uit: ``` npm st
 - [CSS Tricks](https://css-tricks.com/)
 - [Dribbble](https://dribbble.com/)
 - [Colooors](https://coolors.co/)
+- [codepen](https://codepen.io/)
+- [Adaptable](https://adaptable.io/app/signin?redirect=%2Fapp%2Fdashboard#)
 
 ## Licentie
 
